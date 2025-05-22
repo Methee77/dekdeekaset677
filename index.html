@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ร้าน Methee Shop</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+  <!-- Header -->
+  <header class="bg-white shadow p-4 flex justify-between items-center">
+    <h1 class="text-2xl font-bold text-blue-600">🛒 Methee Shop</h1>
+    <div>
+      <span class="text-gray-700">รถเข็น:</span>
+      <span id="cart-count" class="font-bold">0</span> รายการ
+    </div>
+  </header>
+
+  <!-- สินค้า -->
+  <main class="p-6 grid grid-cols-1 md:grid-cols-3 gap-6">
+    <!-- สินค้า 1 -->
+    <div class="bg-white p-4 rounded shadow">
+      <img src="https://via.placeholder.com/150" alt="สินค้า A" class="mb-2 w-full rounded">
+      <h2 class="text-xl font-semibold">สินค้า A</h2>
+      <p class="text-gray-700">ราคา: 299 บาท</p>
+      <button onclick="addToCart()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        เพิ่มในรถเข็น
+      </button>
+    </div>
+
+    <!-- สินค้า 2 -->
+    <div class="bg-white p-4 rounded shadow">
+      <img src="https://via.placeholder.com/150" alt="สินค้า B" class="mb-2 w-full rounded">
+      <h2 class="text-xl font-semibold">สินค้า B</h2>
+      <p class="text-gray-700">ราคา: 499 บาท</p>
+      <button onclick="addToCart()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        เพิ่มในรถเข็น
+      </button>
+    </div>
+
+    <!-- สินค้า 3 -->
+    <div class="bg-white p-4 rounded shadow">
+      <img src="https://via.placeholder.com/150" alt="สินค้า C" class="mb-2 w-full rounded">
+      <h2 class="text-xl font-semibold">สินค้า C</h2>
+      <p class="text-gray-700">ราคา: 199 บาท</p>
+      <button onclick="addToCart()" class="mt-2 bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">
+        เพิ่มในรถเข็น
+      </button>
+    </div>
+  </main>
+
+  <!-- JavaScript -->
+  <script>
+    let cartCount = 0;
+
+    function addToCart() {
+      cartCount++;
+      document.getElementById('cart-count').innerText = cartCount;
+    }
+  </script>
+</body>
+</html>
